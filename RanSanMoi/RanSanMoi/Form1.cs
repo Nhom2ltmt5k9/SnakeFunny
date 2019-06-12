@@ -24,6 +24,7 @@ namespace RanSanMoi
         {
             InitializeComponent();
             food = new Food(randFood);
+            matrix = new Matrix(randMatrix);
             
         }
 
@@ -39,7 +40,7 @@ namespace RanSanMoi
             paper = e.Graphics;
             food.drawFood(paper);
             snake.drawSnake(paper);
-           
+            matrix.drawMatrix(paper);
 
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -119,6 +120,20 @@ namespace RanSanMoi
                     highscore = score;
                 toolStripStatusLabelScorehigh.Text = highscore.ToString();
             }
+            if (score > 50)
+            {
+                timer1.Interval = 90;
+            }
+            if (score > 100)
+            {
+                timer1.Interval = 80;
+                matrix.matrixLocation(randMatrix);
+            }
+            if (score > 150)
+            {
+                timer1.Interval = 70;
+            }
+
             collistion();
             this.Invalidate();
         }
@@ -139,6 +154,10 @@ namespace RanSanMoi
                 Restart();
             }
             if (snake.SnakeRec[0].X < 0 || snake.SnakeRec[0].X > 300)
+            {
+                Restart();
+            }
+            if (snake.SnakeRec[0].IntersectsWith(matrix.matrixRec))
             {
                 Restart();
             }

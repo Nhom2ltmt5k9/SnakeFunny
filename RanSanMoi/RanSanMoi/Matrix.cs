@@ -8,16 +8,29 @@ namespace RanSanMoi
 {
     class Matrix
     {
-        public Rectangle[] matrixRec
-        {
-            get { return matrixRec; }
-        }
+
         private int x, y, width, height;
         private SolidBrush brush;
-        //tao ma tran
-        public Matrix()
+        public Rectangle matrixRec;
+
+        public Matrix(Random randMatrix)
         {
-            
+            x = randMatrix.Next(15, 30) * 10;
+            y = randMatrix.Next(15, 30) * 10;
+            brush = new SolidBrush(Color.Black);
+            width = 25; height = 10;
+            matrixRec = new Rectangle(x, y, width, height);
+        }
+        public void matrixLocation(Random randMatrix)
+        {
+            x = randMatrix.Next(15, 30) * 10;
+            y = randMatrix.Next(15, 30) * 10;
+        }
+        public void drawMatrix(Graphics paper)
+        {
+            matrixRec.X = x;
+            matrixRec.Y = y;
+            paper.FillEllipse(brush, matrixRec);
         }
     }
        

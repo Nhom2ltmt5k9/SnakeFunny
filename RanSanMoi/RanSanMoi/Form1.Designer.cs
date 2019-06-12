@@ -34,6 +34,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripScore = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelScorehigh = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.labelnumber2 = new System.Windows.Forms.Label();
             this.labelnumber1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelScorehigh = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,7 +54,6 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // statusStrip1
@@ -83,6 +82,21 @@
             this.toolStripScore.Name = "toolStripScore";
             this.toolStripScore.Size = new System.Drawing.Size(14, 17);
             this.toolStripScore.Text = "0";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabel2.Text = "High Score";
+            // 
+            // toolStripStatusLabelScorehigh
+            // 
+            this.toolStripStatusLabelScorehigh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.toolStripStatusLabelScorehigh.ForeColor = System.Drawing.Color.Red;
+            this.toolStripStatusLabelScorehigh.Name = "toolStripStatusLabelScorehigh";
+            this.toolStripStatusLabelScorehigh.Size = new System.Drawing.Size(14, 17);
+            this.toolStripStatusLabelScorehigh.Text = "0";
             // 
             // label1
             // 
@@ -221,21 +235,6 @@
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Select speed";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(68, 17);
-            this.toolStripStatusLabel2.Text = "High Score";
-            // 
-            // toolStripStatusLabelScorehigh
-            // 
-            this.toolStripStatusLabelScorehigh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.toolStripStatusLabelScorehigh.ForeColor = System.Drawing.Color.Red;
-            this.toolStripStatusLabelScorehigh.Name = "toolStripStatusLabelScorehigh";
-            this.toolStripStatusLabelScorehigh.Size = new System.Drawing.Size(14, 17);
-            this.toolStripStatusLabelScorehigh.Text = "0";
             // 
             // Form1
             // 
